@@ -21,7 +21,16 @@ class Node {
 	}
 
 	removeChild(node) {
-		
+		if (this.left.data == node.data && this.left.priority == node.priority) {
+            node.parent = null;
+            this.left = null;
+            return;
+        }
+        if (this.right.data == node.data && this.right.priority == node.priority) {
+            node.parent = null;
+            this.right = null;
+            return;
+        } else throw error();
 	}
 
 	remove() {
