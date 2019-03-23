@@ -34,7 +34,11 @@ class Node {
 	}
 
 	remove() {
-		
+		if (this.parent == null) {
+			return;
+		} else {
+		this.parent.removeChild(this);
+		}
 	}
 
 	swapWithParent() {
