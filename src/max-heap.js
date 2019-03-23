@@ -7,7 +7,9 @@ class MaxHeap {
 	}
 
 	push(data, priority) {
-		
+		let nodePush = new Node(data, priority);
+        this.insertNode(nodePush);
+        this.shiftNodeUp(nodePush);
 	}
 
 	pop() {
